@@ -1,0 +1,49 @@
+:root{
+  --bg: linear-gradient(180deg,#fbfcfa,#f3f6f2);
+  --accent: #2f7a45;
+  --muted: #556a57;
+  --card: #ffffff;
+  --glass: rgba(255,255,255,0.6);
+}
+*{box-sizing:border-box}
+body{
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: #18321f;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:1200px;margin:0 auto;padding:0 1.25rem}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.logo{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--accent)}
+.logo span{font-size:0.85rem;color:var(--muted);display:block}
+.nav-links{display:flex;gap:1.4rem;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;padding:0.5rem;border-radius:8px;transition:all .18s}
+.nav-links a:hover{color:var(--accent);background:rgba(47,122,69,0.06)}
+.menu-toggle{display:none}
+.hero{border-bottom:6px solid rgba(47,122,69,0.12)}
+.hero .hero-content h1{font-weight:700;letter-spacing:-0.02em}
+.btn-primary{background:var(--accent);color:#fff;padding:0.75rem 1.4rem;border-radius:999px;border:none;box-shadow:0 6px 18px rgba(47,122,69,0.12);transition:transform .14s ease,box-shadow .14s}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 30px rgba(47,122,69,0.14)}
+.btn-outline{border:1px solid var(--accent);color:var(--accent);background:transparent;padding:0.6rem 1.2rem;border-radius:999px}
+.card{background:var(--card);border-radius:14px;padding:1.5rem;box-shadow:0 8px 28px rgba(9,38,18,0.04);border:1px solid rgba(15,38,24,0.04)}
+.gallery-grid{gap:1rem}
+/* responsive */
+@media (max-width:900px){.nav-links{display:none}.menu-toggle{display:inline-flex}}
+
+/* subtle utilities */
+.muted{color:var(--muted)}
+.center{text-align:center}
+
+/* accessibility focus */
+a:focus{outline:3px solid rgba(47,122,69,0.18);outline-offset:3px}
+
+/* small improvement for hero text readability */
+.hero{position:relative}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.18),rgba(255,255,255,0));pointer-events:none}
+
+/* Footer tweaks */
+footer{padding:2rem 0;color:var(--muted);font-size:0.95rem}
+
+/* make images nicer */
+img{max-width:100%;height:auto;display:block}

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miniforest Agro Farms | Corporate Agriculture & Eco‑Tourism</title>
+  <!-- SEO friendly base -->
+  <meta name="description" content="Premium tea, rubber, fruits & sustainable aquaculture – integrated with eco-tourism excellence. Long‑term agricultural expertise.">
+  <!-- Fonts & minimal styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Fontawesome 5 (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #1e2a1e;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4, .heading-serif {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: #1F3D2B; /* Deep forest green */
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Color palette usage */
+    .bg-forest { background-color: #1F3D2B; }
+    .bg-earth { background-color: #6B4F2A; }
+    .bg-beige { background-color: #F4F1EA; }
+    .bg-white { background-color: #ffffff; }
+    .text-forest { color: #1F3D2B; }
+    .text-earth { color: #6B4F2A; }
+    .accent-green { color: #3F7D4E; }
+    .border-accent { border-color: #3F7D4E; }
+
+    /* cards & layout */
+    .card {
+      background: white;
+      border-radius: 1.25rem;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 20, 0, 0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+      transition: all 0.2s ease;
+      border: 1px solid #e9ece0;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 30px -10px rgba(31, 61, 43, 0.15);
+    }
+
+    .stat-card {
+      background: #F4F1EA;
+      border-radius: 1.5rem;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-bottom: 4px solid #3F7D4E;
+    }
+
+    /* buttons */
+    .btn-primary {
+      background-color: #1F3D2B;
+      color: white;
+      padding: 0.9rem 2.2rem;
+      border-radius: 40px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+      display: inline-block;
+      text-decoration: none;
+      font-size: 1rem;
+      border: 1px solid #1F3D2B;
+    }
+    .btn-primary:hover {
+      background-color: #14321f;
+      border-color: #14321f;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #1F3D2B;
+      color: #1F3D2B;
+      padding: 0.9rem 2.2rem;
+      border-radius: 40px;
+      font-weight: 500;
+      transition: 0.2s;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn-outline:hover {
+      background: #1F3D2B;
+      color: white;
+    }
+
+    /* header & footer */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #1F3D2B;
+      line-height: 1.2;
+    }
+    .logo span {
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      color: #6B4F2A;
+      display: block;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.3rem;
+      font-weight: 500;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #1e2a1e;
+      font-size: 1rem;
+    }
+    .nav-links a:hover {
+      color: #3F7D4E;
+    }
+
+    /* hero */
+    .hero {
+      background: linear-gradient(107deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.1) 80%), url('https://iili.io/q2ESOLN.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      color: white;
+      border-bottom: 6px solid #3F7D4E;
+    }
+    .hero-content {
+      max-width: 700px;
+      padding: 3rem 0;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      line-height: 1.1;
+      color: white;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .hero p {
+      font-size: 1.4rem;
+      margin: 1.5rem 0 2.5rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      font-weight: 300;
+    }
+
+    /* section spacing */
+    section {
+      padding: 5rem 0;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .section-subhead {
+      font-size: 1.2rem;
+      color: #4a5e4a;
+      max-width: 700px;
+      margin-bottom: 3rem;
+    }
+
+    /* core cards grid */
+    .grid-5 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 2rem;
+    }
+
+    /* icon style */
+    .icon-lg {
+      font-size: 2.5rem;
+      color: #3F7D4E;
+      margin-bottom: 1.5rem;
+    }
+
+    /* gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      border-radius: 1.5rem;
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    /* footer */
+    .footer-links a {
+      color: #dddfd7;
+      text-decoration: none;
+      margin-right: 1.8rem;
+    }
+
+    /* map placeholder */
+    .map-placeholder {
+      background: #e5e9e0;
+      height: 260px;
+      border-radius: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4f5d4f;
+      border: 1px solid #c0ccb5;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      .navbar { flex-direction: column; gap: 1rem; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 1.2rem; }
+      .hero h1 { font-size: 2.8rem; }
+      .gallery-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #e3e5db;
+      margin: 1rem 0;
+    }
+    /* tabs for different pages (simulated single html) */
+    .page-section {
+      scroll-margin-top: 2rem;
+    }
+
+    /* Contact details card — refined */
+    .contact-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      background: #F9FAF5;
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+      border: 1px solid #dee5d5;
+    }
+    .contact-icon {
+      font-size: 2.2rem;
+      color: #3F7D4E;
+      min-width: 3rem;
+      text-align: center;
+    }
+    .contact-text h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+      color: #1F3D2B;
+    }
+    .contact-text p {
+      color: #2f422f;
+      font-weight: 400;
+    }
+    /* Responsive improvements */
+    html { font-size: 16px; }
+    :root {
+      --container-padding: 2rem;
+    }
+    .container { padding: 0 var(--container-padding); }
+    h1 { font-size: clamp(2rem, 4.5vw, 4rem); }
+    h2 { font-size: clamp(1.4rem, 2.5vw, 2.5rem); }
+    p { font-size: clamp(0.95rem, 1.6vw, 1.1rem); }
+
+    /* Mobile nav toggle */
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: inherit;
+      padding: 0.45rem 0.8rem;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    /* Make buttons full width on small screens */
+    .btn-primary.mobile-full, .btn-outline.mobile-full { width: 100%; display:block; }
+
+    @media (max-width: 1024px) {
+      :root { --container-padding: 1.25rem; }
+      .grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); }
+      .grid-5 { grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); }
+    }
+
+    @media (max-width: 800px) {
+      .navbar { flex-direction: row; gap: 1rem; align-items:center; }
+      .menu-toggle { display: inline-flex; align-items:center; justify-content:center; }
+      .nav-links { display: none; flex-direction: column; width:100%; background: transparent; gap: 0.8rem; padding-top: 0.6rem; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 0.5rem 0.25rem; text-align: center; display:block; }
+      .hero { min-height: 55vh; background-position: center 30%; }
+      .gallery-grid { grid-template-columns: repeat(2,1fr); }
+      .contact-detail-grid { grid-template-columns: 1fr; }
+      .card { padding: 1.1rem; }
+      .map-placeholder, .card iframe { height: 200px; }
+      .btn-primary, .btn-outline { padding: 0.8rem 1rem; }
+      .btn-primary.mobile-full, .btn-outline.mobile-full { width:100%; }
+    }
+
+    @media (max-width: 480px) {
+      :root { --container-padding: 1rem; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+      .nav-links a { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navigation (same for all pages) -->
+  <div class="container">
+    <nav class="navbar">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <div class="logo">Miniforest Agro Farms <span>EST. 2008</span></div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#tea">Tea</a>
+        <a href="#rubber">Rubber</a>
+        <a href="#fruits">Fruits</a>
+        <a href="#fish">Fish</a>
+        <a href="#tourism">Eco‑Tourism</a>
+        <a href="#invest">Invest</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- HOMEPAGE (hero, etc) -->
+  <section id="home" class="hero page-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Cultivating Nature. <br>Growing Legacy.</h1>
+        <p>Premium Tea, Rubber, Fruits & Sustainable Aquaculture – Integrated with Eco‑Tourism Excellence.</p>
+        <a href="#tourism" class="btn-primary" style="margin-right: 1rem;">Explore Our Farms</a>
+        <a href="#contact" class="btn-outline" style="background: rgba(255,255,240,0.15); color: white; border-color: white;">Visit Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Overview (home) -->
+  <section class="bg-beige page-section" id="about">
+    <div class="container">
+      <h2 class="section-title">Integrated since 18 years</h2>
+      <div style="display: flex; gap: 3rem; flex-wrap: wrap;">
+        <p style="flex: 2; font-size: 1.2rem; color: #2b3a2b;">Miniforest Agro Farms represents stability, long‑term agricultural expertise, and environmental responsibility. Spread across 135 acres, we combine tea, rubber, fruits, lake aquaculture, and immersive eco‑tourism — a model of diversified sustainability.</p>
+        <div style="flex: 1; border-left: 3px solid #3F7D4E; padding-left: 2rem;">
+          <p><strong>Community:</strong> 2+ families</p>
+          <p><strong>Carbon positive since 2015</strong></p>
+          <p><strong>Rainforest Alliance aligned</strong></p>
+        </div>
+      </div>
+      
+      <!-- 3 highlight cards -->
+      <div class="grid-3" style="margin-top: 3rem;">
+        <div class="card"><i class="fas fa-seedling icon-lg"></i><h3>Sustainable Agriculture</h3><p>Soil conservation, organic composting & integrated pest management across all plantations.</p></div>
+        <div class="card"><i class="fas fa-leaf icon-lg"></i><h3>Diversified Farming</h3><p>Synergy between tea, rubber, fruit gardens and lake aquaculture enriches biodiversity.</p></div>
+        <div class="card"><i class="fas fa-hiking icon-lg"></i><h3>Agro‑Tourism Destination</h3><p>Guided farm tours, lake views, photography & school programs — open all year.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Operations (5 cards) -->
+  <section class="container page-section">
+    <h2 class="section-title">Our core operations</h2>
+    <div class="grid-5">
+      <div class="card"><i class="fas fa-leaf icon-lg"></i><h3>Tea Plantation</h3><p>3 acres of high-altitude tea, orthodox & CTC.</p><a href="#tea" style="color:#3F7D4E; font-weight:500;">Learn more →</a></div>
+      <div class="card"><i class="fas fa-tree icon-lg"></i><h3>Rubber Plantation</h3><p>Sustainable tapping, 2000 kg/year. Supplying to tyre & industrial partners.</p><a href="#rubber" style="color:#3F7D4E; font-weight:500;">Learn more →</a></div>
+      <div class="card"><i class="fas fa-apple-alt icon-lg"></i><h3>Fruits Garden</h3><p>Mango, lichi, star fruit & exotic fruits. Seasonal organic harvest.</p><a href="#fruits" style="color:#3F7D4E; font-weight:500;">Learn more →</a></div>
+      <div class="card"><i class="fas fa-fish icon-lg"></i><h3>Fish Farming (Lake)</h3><p>1-acre lake – tilapia, catla, rohu. Sustainable polyculture & water management.</p><a href="#fish" style="color:#3F7D4E; font-weight:500;">Learn more →</a></div>
+      <div class="card"><i class="fas fa-campground icon-lg"></i><h3>Eco Tourism</h3><p> Birdwatching, lake views, fishing, photography. Booking open(Call for booking details).</p><a href="#tourism" style="color:#3F7D4E; font-weight:500;">Learn more →</a></div>
+    </div>
+  </section>
+
+  <!-- Why choose us / statistics -->
+  <section class="bg-beige">
+    <div class="container">
+      <h2 class="section-title">Miniforest by numbers</h2>
+      <div class="grid-5">
+        <div class="stat-card"><h2 style="font-size:3rem;">135</h2><p>Total acreage</p></div>
+        <div class="stat-card"><h2 style="font-size:3rem;">5000KG</h2><p>Annual prodruction</p></div>
+        <div class="stat-card"><h2 style="font-size:3rem;">2</h2><p>Workers employed</p></div>
+        <div class="stat-card"><h2 style="font-size:3rem;">18</h2><p>Years of experience</p></div>
+        <div class="stat-card"><h2 style="font-size:3rem;">1 ac</h2><p>Lake for aquaculture</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery preview -->
+  <section class="container">
+    <h2 class="section-title">Scenes from the farm</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" style="background-image: url('https://iili.io/q2ESOLN.jpg');"></div>
+      <div class="gallery-item" style="background-image: url('https://iili.io/q2EUnyJ.jpg');"></div>
+      <div class="gallery-item" style="background-image: url('https://iili.io/q3fT2rG.jpg');"></div>
+      <div class="gallery-item" style="background-image: url('https://iili.io/q2EgjiN.jpg');"></div>
+    </div>
+
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-beige">
+    <div class="container">
+      <h2 class="section-title">Partners & visitors</h2>
+      <div class="grid-3">
+        <div class="card"><i class="fas fa-quote-left accent-green" style="font-size:2rem;"></i><p style="margin:1rem 0;">“Consistent quality tea supplier for over a decade. Their sustainable practices are commendable.”</p><h4>– Mr. Selim, Germany</h4></div>
+        <div class="card"><i class="fas fa-quote-left accent-green" style="font-size:2rem;"></i><p style="margin:1rem 0;">“The farm stay was unforgettable. Pristine lake, rubber tapping demo – pure learning for kids.”</p><h4>– Shafayet Anwar, Bangladesh</h4></div>
+        <div class="card"><i class="fas fa-quote-left accent-green" style="font-size:2rem;"></i><p style="margin:1rem 0;">“Reliable tea leaves supplier. Ethical labor practices and transparent partnership.”</p><h4>– Pahari Green Tea</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDIVIDUAL PAGES (separated by sections) -->
+  <!-- About page (detailed) -->
+  <section id="about-full" class="container page-section" style="padding-top:2rem;">
+    <h2 class="section-title">About Miniforest Agro Farms</h2>
+    <div style="display: flex; gap: 3rem; flex-wrap: wrap;">
+      <div style="flex:1"><img src="https://iili.io/qFKx2YF.png" style="width:100%; border-radius:2rem;" alt="founder"></div>
+      <div style="flex:2"><p style="font-size:1.2rem;"><strong>Founded in 2008</strong> by a businessman Mohammed Sazzad Kamal Chowdhury, Miniforest began as a tea plantation and evolved into a multi‑sector regenerative enterprise. Our philosophy: “soil first, profit follows.” With zero‑burn farming, rain water harvesting, and community education, we are a model for tropical agro‑ecology. </p>
+      <h3 style="margin:1.8rem 0 0.5rem;">Mission & Vision</h3><p>Sustainably increase agro‑exports while expanding eco‑tourism, reaching 150 acres by 2030, and remain carbon positive.</p>
+      <h3 style="margin:1.8rem 0 0.5rem;">Leadership</h3><p><strong>Mohammed Sazzad Kamal Chowdhury</strong>, Founder – 25 years in agriculture & business. <br> 
+    </div>
+  </section>
+  <!-- Tea Plantation -->
+<section id="tea" class="bg-beige page-section">
+  <div class="container">
+    <h2 class="section-title">Tea Plantation</h2>
+    <div class="grid-3">
+
+      <div class="card">
+        <div class="icon-box"><i class="fas fa-leaf"></i></div>
+        <h3>Area & Terroir</h3>
+        <p>4 acres dedicated to white tea, green tea and specialty black tea cultivation.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-box"><i class="fas fa-industry"></i></div>
+        <h3>Processing</h3>
+        <p>Withering, rolling and oxidation in our hand-operated processing facility.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+        <h3>Wholesale Supply</h3>
+        <p>6,000 kg/year supplied to packers and specialty blenders.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Rubber Plantation -->
+<section id="rubber" class="container page-section">
+  <h2 class="section-title">Rubber Plantation</h2>
+  <div class="grid-3">
+
+    <div class="card">
+      <div class="icon-box"><i class="fas fa-tree"></i></div>
+      <h3>Hevea Brasiliensis</h3>
+      <p>9 acres under clone RRII 105. Daily tapping with eco-friendly coagulants.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon-box"><i class="fas fa-cogs"></i></div>
+      <h3>Production</h3>
+      <p>80 MT/year of RSS grade sheets supplied to the automotive sector.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon-box"><i class="fas fa-handshake"></i></div>
+      <h3>Industry Partners</h3>
+      <p>Long-term contracts with national manufacturers and exporters.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Fruits Garden -->
+<section id="fruits" class="bg-beige page-section">
+  <div class="container">
+    <h2 class="section-title">Fruits Garden</h2>
+    <div class="grid-3">
+
+      <div class="card">
+        <div class="icon-box"><i class="fas fa-apple-alt"></i></div>
+        <h3>Mango Varieties</h3>
+        <p>Rupali, Barma and premium seasonal varieties (Harvest: April–June).</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-box"><i class="fas fa-seedling"></i></div>
+        <h3>Diversified Crops</h3>
+        <p>Mango, orange, star fruit, guava and jackfruit with integrated pest management.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-box"><i class="fas fa-truck"></i></div>
+        <h3>Supply Chain</h3>
+        <p>Direct distribution to premium retailers and processing units.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Lake Aquaculture -->
+<section id="fish" class="container page-section">
+  <h2 class="section-title">Lake Aquaculture</h2>
+  <div class="grid-3">
+
+    <div class="card">
+      <div class="icon-box"><i class="fas fa-water"></i></div>
+      <h3>1 Acre Lake</h3>
+      <p>Polyculture of catla, rohu, common carp and tilapia.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon-box"><i class="fas fa-solar-panel"></i></div>
+      <h3>Water Quality</h3>
+      <p>Solar aerators and antibiotic-free management practices.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon-box"><i class="fas fa-fish"></i></div>
+      <h3>Annual Harvest</h3>
+      <p>40 kg/year of responsibly farmed freshwater fish.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Eco Tourism -->
+<section id="tourism" class="bg-beige page-section">
+  <div class="container">
+    <h2 class="section-title">Eco-Tourism Experiences</h2>
+    <div class="grid-3">
+
+      <div class="card">
+        <div class="icon-box"><i class="fas fa-binoculars"></i></div>
+        <h3>Farm Tours</h3>
+        <p>Daily 6:00 AM – 5:00 PM. Tea tasting, rubber tapping and garden walks.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-box"><i class="fas fa-camera"></i></div>
+        <h3>Photography Spots</h3>
+        <p>Lake sunset views, bird observation points and plantation landscapes.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-box"><i class="fas fa-school"></i></div>
+        <h3>Educational Programs</h3>
+        <p>Sustainable agriculture workshops for schools (prior booking required).</p>
+      </div>
+
+    </div>
+
+    <div style="margin-top:3rem; background:#eef2e6; border-radius:1.5rem; padding:2rem;">
+      <div class="icon-box" style="margin-bottom:1rem;"><i class="fas fa-map-marker-alt"></i></div>
+      <h3>Visiting Hours & Location</h3>
+      <p>Open daily from 6:00 AM to 5:00 PM.</p>
+    </div>
+
+  </div>
+</section>
+      <div style="margin-top:1rem;">
+        <div class="card" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+          <div style="display:flex; gap:1rem; align-items:center;">
+            <i class="fas fa-map-marked-alt" style="font-size:2rem; color:#3F7D4E; margin-left:0.5rem;"></i>
+            <div>
+              <div style="font-weight:600;">Miniforest Agro Farms, Fatickchari, Chattogram</div>
+              <div style="color:#4f684f; font-size:0.95rem;"> Open the map below</div>
+            </div>
+          </div>
+          <a href="https://share.google/wDUc35pjBp1YfY9dM" target="_blank" class="btn-outline" style="padding:0.6rem 1rem; margin-right:0.75rem;">Open in Maps</a>
+        </div>
+      </div>
+    </div></div></section>
+
+  <!-- Investor & Sustainability sections -->
+  <section id="invest" class="container page-section"><h2 class="section-title">Investment & expansion</h2><div class="grid-3"><div class="card"><h3>Land expansion</h3><p>Acquiring 150 acres adjacent for rubber & eco‑lodges.</p></div><div class="card"><h3>Growth projections</h3><p>15% annual increase in aquaculture, new processing unit 2026.</p></div><div class="card"><h3>Sustainability bond</h3><p>Green investment options for accredited partners.</p></div></div></section>
+  <section id="sustainability" class="bg-beige page-section"><div class="container"><h2 class="section-title">Sustainability practices</h2><div class="grid-3"><div class="card"><i class="fas fa-droplet icon-lg"></i><h3>Water conservation</h3><p>Rainwater harvesting, drip irrigation, lake preservation.</p></div><div class="card"><i class="fas fa-leaf icon-lg"></i><h3>Organic practices</h3><p>Bio‑fertilizers, neam cakes, no chemical pesticides in fruit garden.</p></div><div class="card"><i class="fas fa-recycle icon-lg"></i><h3>Waste management</h3><p>Composting, wastewater treatment, zero plastic.</p></div></div></div></section>
+
+  <!-- Contact page - only professional contact details (no booking/inquiry forms) -->
+  <section id="contact" class="container page-section">
+    <h2 class="section-title">Contact & farm office</h2>
+    <!-- refined contact cards -->
+    <div class="contact-detail-grid">
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+        <div class="contact-text"><h4>Phone</h4><p>+880 167 420 1072</p></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <div class="contact-text"><h4>Email</h4><p>agroconcern@gmail.com</p></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fas fa-map-pin"></i></div>
+        <div class="contact-text"><h4>Office</h4><p>Kanchanagar, Fatickchari, Chattogram</p></div>
+      </div>
+    </div>
+    <!-- corporate map (dignified) -->
+    <div style="margin-top: 3rem;">
+      <div>
+        <div class="card" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem;">
+          <div style="display:flex; gap:1rem; align-items:center;">
+            <i class="fas fa-map-pin" style="font-size:2rem; color:#3F7D4E;"></i>
+            <div>
+              <div style="font-weight:600;">Miniforest Agro Farms, Fatickchari, Chattogram</div>
+              <div style="color:#4f684f; font-size:0.95rem;"></div>
+            </div>
+          </div>
+          <a href="https://share.google/wDUc35pjBp1YfY9dM" target="_blank" class="btn-outline" style="padding:0.6rem 1rem;">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+    <!-- note: no booking or inquiry forms, only professional presence -->
+  </section>
+
+  <!-- PROFESSIONAL FOOTER -->
+  <footer class="bg-forest" style="color:#dbebd2; padding: 3rem 0;">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <div style="max-width:300px;"><h4 style="color:#F4F1EA;">Miniforest Agro Farms</h4><p style="margin:1rem 0;">Cultivating nature, growing legacy. Premium agri‑exports & responsible eco‑tourism.</p></div>
+        <div><h4 style="color:#F4F1EA;">Quick links</h4><ul style="list-style:none;"><li><a href="#home" style="color:#dbebd2;">Home</a></li><li><a href="#about" style="color:#dbebd2;">About</a></li><li><a href="#invest" style="color:#dbebd2;">Investor</a></li></ul></div>
+        <div>
+  <a href="https://www.facebook.com/profile.php?id=100067027470144" target="_blank" style="text-decoration: none; color: inherit;">
+    <i class="fab fa-facebook fa-2x" style="margin-right:1rem;"></i>
+  </a>
+</div>
+      </div>
+      <hr style="border-color:#4b684b;">
+      <p style="text-align:center;">© 2026 Miniforest Agro Farms. All rights reserved. Developed for corporate agri‑estate.</p>
+    </div>
+  </footer>
+  <!-- subtle scroll behavior -->
+  <script>
+    // mobile nav toggle
+    (function(){
+      const btn = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.nav-links');
+      if(btn && nav){
+        btn.addEventListener('click', ()=>{
+          const open = nav.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open);
+        });
+      }
+    })();
+    // smooth anchor
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior: 'smooth'});
+      });
+    });
+  </script>
+  <script src="script.js"></script>
+  </body>
+</html>
